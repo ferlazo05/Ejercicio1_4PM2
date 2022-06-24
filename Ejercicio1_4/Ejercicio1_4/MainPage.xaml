@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1_4.MainPage">
+
+    <StackLayout>
+        <!--Imagen-->
+        <Label Text="Imagen del sitio visitado" FontSize="Title" TextColor="Black" HorizontalTextAlignment="Center"/>
+        <Image x:Name="Foto" WidthRequest="300"  HeightRequest="300" BackgroundColor="AliceBlue" />
+        <Button x:Name="btnfoto" Text="Agregar foto" Clicked="btnfoto_Clicked" Margin="10,0,10,0" TextColor="Black"/>
+        <!--Nombre-->
+        <Label Text="Nombre:" FontSize="16" TextColor="Black" Margin="5,0,5,0"/>
+        <Entry x:Name="txtnombre" Placeholder="Ingrese un nombre" Keyboard="Text" Margin="10,0,10,0" TextColor="Black" FontSize="16"/>
+        <!--Descripcion-->
+        <Label Text="Descripcion:" FontSize="16" TextColor="Black" Margin="5,0,5,0"/>
+        <Entry x:Name="txtdescripcion" Placeholder="Ingrese una descripcion" Keyboard="Text" Margin="10,0,10,0" TextColor="Black" FontSize="16"/>
+        <!--Botones-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button x:Name="btnlista" Text="Listado" Clicked="btnlista_Clicked" Margin="10,0,10,0" TextColor="Black"/>
+            <Button x:Name="btnagregar" Text="A SQLite" Clicked="btnagregar_Clicked" Margin="10,0,10,0" TextColor="Black"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Convertidor="clr-namespace:Ejercicio1_4.Convert"
+             x:Class="Ejercicio1_4.ViewPhoto">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Convertidor:ByteArrayToImage x:Key="ByteToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding id}" x:Name="txtid" IsVisible="false"/>
+            <Image x:Name="imagePhoto" Source="{Binding foto, Converter={StaticResource ByteToImage}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Label Text="Nombre: " TextColor="Black" FontSize="16" FontAttributes="Bold" Margin="5,0,5,0"/>
+                <Label Text="{Binding nombre}" x:Name="txtnombre" TextColor="Black" FontSize="16" FontAttributes="Bold" Margin="5,0,5,0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Label Text="Descripcion: " TextColor="Black" FontSize="16" FontAttributes="Bold" Margin="5,0,5,0"/>
+                <Label Text="{Binding descripcion}" x:Name="txtdescripcion" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
